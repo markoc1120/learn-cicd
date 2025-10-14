@@ -20,7 +20,7 @@ func TestGetAPIKey(t *testing.T) {
 		},
 		{
 			name:          "wrong authorization in the header",
-			headers:       http.Header{"Authorization": []string{"ApiKey TOKEN_STRING"}},
+			headers:       http.Header{"Authorization": []string{"ApiKeys TOKEN_STRING"}},
 			expectedErr:   ErrMalformedHeader,
 			expectedToken: "",
 		},
